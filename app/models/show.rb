@@ -6,7 +6,7 @@ class Show < ActiveRecord::Base
 
   def self.most_popular_show
     # Show.order(rating: :desc).first
-    Show.find_by(:rating 10)
+    Show.find_by(highest_rating)
   end
 
   def self.lowest_rating
